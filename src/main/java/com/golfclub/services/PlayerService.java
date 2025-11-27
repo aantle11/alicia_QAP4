@@ -35,4 +35,26 @@ public class PlayerService {
     public List<Player> searchByMembershipType(String membershipType) {
         return playerRepository.findByMembershipTypeIgnoreCase(membershipType);
     }
+
+    public Optional<Player> updatePlayer(Long id, Player updatedPlayer) {
+        return playerRepository.findById(id).map(existingPlayer -> {
+
+            existingPlayer.setPlayerName(updatedPlayer.getPlayerName());
+            existingPlayer.setAddress(updatedPlayer.getAddress());
+            existingPlayer.setEmail(updatedPlayer.getEmail());
+            existingPlayer.setPhone(updatedPlayer.getPhone());
+            existingPlayer.setMembershipType(updatedPlayer.getMembershipType());
+            existingPlayer.setMembershipStartDate(updatedPlayer.getMembershipStartDate());
+            existingPlayer.setMembershipDurationMonths(updatedPlayer.getMembershipDurationMonths());
+
+            return playerRepository.save(existingPlayer);
+        });
+    }
+
+    public boolean deletePlayer(Long id) {
+        return playerRepository.findById(id).map(player -> {
+            playerRepository.delete(player);
+            return true;
+        }).orElse(false);
+    }
 }

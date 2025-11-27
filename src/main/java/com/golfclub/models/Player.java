@@ -16,6 +16,8 @@ public class Player {
     private String email;
     private String phone;
 
+    private String membershipType;
+
     private LocalDate membershipStartDate;
     private int membershipDurationMonths;
 
@@ -44,6 +46,9 @@ public class Player {
 
     public String getPhone() { return phone; }
     public void setPhone(String phone) { this.phone = phone; }
+
+    public String getMembershipType() { return membershipType; }
+    public void setMembershipType(String membershipType) { this.membershipType = membershipType; }
 
     public LocalDate getMembershipStartDate() { return membershipStartDate; }
     public void setMembershipStartDate(LocalDate membershipStartDate) { this.membershipStartDate = membershipStartDate; }
