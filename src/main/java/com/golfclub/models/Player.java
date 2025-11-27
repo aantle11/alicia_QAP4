@@ -49,5 +49,5 @@ public class Player {
     public void setMembershipStartDate(LocalDate membershipStartDate) { this.membershipStartDate = membershipStartDate; }
 
     public int getMembershipDurationMonths() { return membershipDurationMonths; }
-    public void setMembershipDurationMonths(int membershipDurationMonths) {}
+    public void setMembershipDurationMonths(int membershipDurationMonths) {this.membershipDurationMonths = membershipDurationMonths; }
 }
