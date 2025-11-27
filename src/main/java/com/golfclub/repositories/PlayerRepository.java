@@ -14,4 +14,6 @@ public interface PlayerRepository extends JpaRepository<Player,Long>{
     List<Player> findByPhoneContaining(String phone);
 
     List<Player> findByMembershipStartDate(LocalDate startDate);
+
+    List<Player> findByMembershipTypeIgnoreCase(String membershipType);
 }
