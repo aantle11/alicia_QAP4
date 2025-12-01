@@ -8,7 +8,6 @@ Search Features
 /tournaments/search?name={name} - search tournament by name
 /players/search?name={name} - search player by name
 
-I had issues running the project with docker as i had to enable something in bios, screenshot provided in the images folder while in there i could not figure out how to enable virtualization i reached out for help but was unable to fix it.
 
 AWS Deployment
 ec2 instance was created
@@ -18,6 +17,7 @@ application.properties was updated to use the rds endpoint instead of the local 
 Issues Faced:
 1. Sudo disabled on local machine: had to enable developer settings in windows to gain permissions
 2. Key Pair - when creating the ec2 instance my key pair wasnt downloaded so i had to create a new key pair and attach it
+3. Running the project with docker as i had to enable something in bios, screenshot provided in the images folder while in there i could not figure out how to enable virtualization i reached out for help but was unable to fix it.
 
 Screenshots of Postman testing, docker, and deployment steps taken are all in Images
 
